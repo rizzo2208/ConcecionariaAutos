@@ -5,6 +5,7 @@ using ConcecionariaAutos.UnitOfWork;
 
 namespace VentaDeVehiculo.Controllers
 {
+    [Tags("Api Cliente")]
     [Route("api/[controller]")]
     [ApiController]
     public class ClienteController : ControllerBase
@@ -16,7 +17,10 @@ namespace VentaDeVehiculo.Controllers
         {
             _context = context;
         }
-
+        /// <summary>
+        /// Api para seleccionar clientes
+        /// </summary>
+        
         [HttpGet]
         public ActionResult<IEnumerable<Cliente>> Get()
         {
